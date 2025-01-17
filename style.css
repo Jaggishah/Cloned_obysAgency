@@ -1,0 +1,287 @@
+@font-face {
+    font-family: myPlainLight;
+    src: url('assets/11zon_plain-light-webfont.ttf');
+  }
+  @font-face {
+    font-family: mysilkSerif;
+    src: url('assets/11zon_silkserif-regularitalic-webfont.ttf');
+  }
+  @font-face {
+    font-family: myPlainLight2;
+    src: url('assets/vertopal.com_plain-light-webfont.ttf');
+    font-weight: bold;
+  }
+  @font-face {
+    font-family: mysilkSerifitalic;
+    src: url('assets/vertopal.com_silkserif-lightitalic-webfont.ttf');
+  }
+
+*{
+    padding: 0;
+    margin : 0;
+    box-sizing:border-box;
+    color:#ffffffd5
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    background-color: #151515;
+}
+#mouseFollower{
+    position: absolute;
+    top:0;
+    left:0;
+    transform: translate(-50%,-50%);
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    color: transparent;
+    border: 1px solid #ffffffd5;
+    mix-blend-mode: difference;
+}
+#loader{
+    height:100vh;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: myPlainLight;
+    text-transform: uppercase;
+    font-size: 3.5vw;
+    z-index: 999;
+}
+
+#loaderText{
+    position: relative;
+    left:10%;
+    height: fit-content;
+    overflow-y: hidden;
+    overflow-x: visible;
+}
+#loaderText #counter{
+    display: inline-block;
+    font-family: mysilkSerifitalic;
+    font-size: 3.3vw;
+    position: relative;
+    top:-15px;
+    width: 130px;
+    text-align: center;
+}
+
+#loaderText #animationText{
+
+    line-height: 5vw;
+    animation: animeText 1s infinite;
+}
+
+#subtleText{
+    font-size: 1vw;
+    text-transform: lowercase;
+    width: 60px;
+    height: fit-content;
+    line-height: 2vw;
+    position: relative;
+    left:30%;
+    margin-top: 3vh;
+    
+}
+
+@keyframes animeText {
+    0% {
+        font-family: 'mysilkSerifitalic';
+        -webkit-text-stroke: 0.1px #ffffffa1;
+        color: transparent;
+    }
+    25% {
+        font-family: 'mysilkSerifitalic';
+        -webkit-text-stroke: none;
+        color:#ffffffa1;
+    }
+    50% {
+        font-family: 'myPlainLight';
+        color:#ffffffa1;
+       /* Or whatever color you want for the light font */
+        -webkit-text-stroke: none; /* Optionally remove stroke if you want */
+    }
+    75% {
+        font-family: 'myPlainLight';
+        -webkit-text-stroke: 0.1px #ffffffa1;
+        color: transparent;
+    }
+    100% {
+        font-family: 'mysilkSerifitalic';
+        -webkit-text-stroke: 0.1px #ffffffa1;
+        color: transparent;
+    }
+}
+
+#page1{
+    height: 90vh;
+    width: 100vw;
+    display: none;
+
+}
+
+
+#page3{
+    height: 100vh;
+    width: 100vw;
+    display: none;
+}
+
+#page1 #nav{
+    display: flex;
+    padding: 3.5vw 3.5vh;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+#nav-part1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap:10px
+}
+#nav-part1 i {
+    font-size: 15px;
+    /* z-index: 2; */
+}
+#nav-part1 svg {
+    width: 50px;
+    height: 15px;
+}
+
+#nav-part2{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap:2vw;
+    padding-right: 4vw;
+}
+
+#nav-part2 h1{
+    font-size: 1.1vw;
+    font-family: myPlainLight;
+}
+
+#hero-page1{    
+    height: 80%;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+#hero-page1-main{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 4vw;
+}
+
+#hero-page1-main>h1{
+    font-family: mysilkSerifitalic;
+    font-size: 4vw;
+}
+
+#hero-page1-main #main-text{
+    font-family: myPlainLight;
+    font-size: 3.2vw;
+    text-transform: uppercase;
+    line-height: 10vh;
+}
+
+#hero-page1-main #main-text #line{
+    height: fit-content;
+    overflow: hidden;
+    position: relative;
+}
+.hoverEffect {
+    display: inline-block;
+    transition: border-bottom 0.3s ease;
+    border-bottom: 1px solid transparent;
+}
+.hoverEffect2 {
+    display: inline-block;
+    transition: border-bottom 0.3s ease;
+    border-bottom: 1px solid transparent;
+}
+
+
+#doublecolourEffects{
+    height: 25vh;
+    width: 10vw;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    top:0;
+    left:0
+}
+
+#color-part-1{
+    background-color: #4d55a6;
+    height: 100%;
+    flex : 1
+}
+
+#color-part-2{
+    background-color: #1d945c;
+    height: 100%;
+    flex : 1
+}
+
+
+#page2{
+    height: 60vh;
+    width: 100vw;
+    display: none;
+}
+
+#page2-main{
+    height: 60vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#blank_videoConatainer{
+    flex: 1
+}
+
+#page2-main #videoContainer{
+    position: relative;
+    height: 100%;
+    width: 80%;
+}
+
+#page2-main #videoContainer>img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+#playFollower{
+    height: 70px;
+    width: 70px;
+    background-color: yellow;
+    position: absolute;
+    top: 0;
+    left : 0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%,-50%);
+    z-index: 999;
+}
+#playFollower i {
+    color: black
+}
